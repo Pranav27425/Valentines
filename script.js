@@ -4,7 +4,16 @@ const message = document.getElementById("message");
 const modal = document.getElementById("modal");
 const closebtn = document.getElementById("closebtn");
 const safeArea = document.getElementById("safeArea");
+const music = document.getElementById("bg-music");
 
+function startMusic() {
+  music.play();
+  document.removeEventListener("mousemove" , startMusic);
+  document.removeEventListener("touchstart" , startMusic);
+}
+
+document.addEventListener("mousemove" , startMusic);
+document.addEventListener("touchstart" , startMusic);
 const messages = [
   "Na na na😏" , 
   "😒😒",
